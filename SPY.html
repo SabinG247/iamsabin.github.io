@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="spy.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up the Environment</title>
+    
+</head>
+<body>
+    <body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+                </div>
+    <h1>1. Setting Up the Environment</h1>
+    
+    <p>We begin by importing the necessary packages:</p>
+    
+    <ul>
+        <li><strong>Pandas</strong> is the go-to package for data manipulation.</li>
+        <li><strong>NumPy</strong> provides support for mathematical functions.</li>
+        <li><strong>Matplotlib</strong> and <strong>Seaborn</strong> are used for data visualization.</li>
+        <li><strong>Glob</strong> helps us retrieve files with specific patterns.</li>
+    </ul>
+    
+    <p>We then create a list of the companies we want to analyze. For this project, we focus on four major tech stocks: Apple, Amazon, Google, and Microsoft.</p>
+    
+    <div class="code-block">
+        <code>import pandas as pd</code><br>
+        <code>import numpy as np</code><br>
+        <code>import matplotlib.pyplot as plt</code><br>
+        <code>import seaborn as sns</code><br>
+        <code>import glob</code>
+    </div>
+
+    <h2>2. Loading and Inspecting the Data</h2>
+        <p>To analyze these companies' stock prices, we load the respective CSV files that contain historical stock data for each company:</p>
+        <div class="code-block">
+            <code>company_list = [</code><br>
+            <code>&nbsp;&nbsp;'AAPL_data.csv',</code><br>
+            <code>&nbsp;&nbsp;'AMZN_data.csv',</code><br>
+            <code>&nbsp;&nbsp;'GOOGL_data.csv',</code><br>
+            <code>&nbsp;&nbsp;'MSFT_data.csv'</code><br>
+            <code>]</code><br><br>
+            <code># Loading Apple stock data</code><br>
+            <code>apple_data = pd.read_csv(company_list[0])</code><br>
+            <code>apple_data.head()</code>
+        </div>
+        <p>We use the <code>.head()</code> and <code>.sample()</code> functions to inspect the first few rows and a random sample of the data.</p>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+    
+</body>
+</html>
